@@ -17,8 +17,12 @@
 #include "concurrent_map.h"
 #include "log_duration.h"
 
-#define SMALL_RANGE_FOR_COMPARE 1e-6
+#define SMALL_RANGE_FOR_COMPARE 1e-6 // для сравнения вещественных чисел.
 
+/**
+	* Ядро поискового сервера с добавленными методами, 
+	* поддерживающими параллельные алгоритмы.
+	**/
 class SearchServer {
 public:
     template <typename StringContainer>

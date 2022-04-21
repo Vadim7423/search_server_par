@@ -4,6 +4,9 @@
 
 #include "test_example_functions.h"
 
+/**
+	* Очередь запросов к поисковому серверу.
+	**/
 class RequestQueue {
 public:
     explicit RequestQueue(const SearchServer& search_server)

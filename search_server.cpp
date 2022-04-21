@@ -1,7 +1,7 @@
 #include <algorithm>
 
 #include "search_server.h"
-#include "log_duration.h"
+#include "log_duration.h" // Профилировщик. Нужен был для отладки.
 
 using namespace std::string_literals;
 

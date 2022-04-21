@@ -11,6 +11,10 @@
 
 using namespace std::string_literals;
 
+/**
+	* Обертка для map для использования в параллельных алгоритмах.
+	* Защита от состояния гонки.
+	**/
 template <typename Key, typename Value>
 class ConcurrentMap {
 private:

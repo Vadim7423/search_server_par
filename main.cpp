@@ -1,5 +1,5 @@
 #include "search_server.h"
-#include "log_duration.h"
+//#include "log_duration.h"
 #include "process_queries.h"
 
 #include <execution>
@@ -55,7 +55,7 @@ vector<string> GenerateQueries(mt19937& generator, const vector<string>& diction
 
 template <typename ExecutionPolicy>
 void Test(string_view mark, const SearchServer& search_server, const vector<string>& queries, ExecutionPolicy&& policy) {
-    LOG_DURATION(mark);
+   // LOG_DURATION(mark);
     double total_relevance = 0;
     for (const string_view query : queries) {
         for (const auto& document : search_server.FindTopDocuments(policy, query)) {
